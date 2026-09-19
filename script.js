@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navToggle.setAttribute("aria-expanded", isOpen);
   });
 
+  // Menutup menu otomatis saat salah satu link navigasi diklik (khusus mobile)
   var navLinks = navMenu.querySelectorAll("a");
   navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // Simulasi pengiriman berhasil (halaman ini statis, belum terhubung ke server)
     formFeedback.textContent = "Terima kasih, " + nama + "! Pesan Anda berhasil terkirim.";
     formFeedback.classList.add("success");
     contactForm.reset();

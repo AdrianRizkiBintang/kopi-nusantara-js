@@ -13,6 +13,7 @@ body {
   color: #4a3b31;
   background-color: #fdf7f2;
   line-height: 1.6;
+  /* Mencegah scroll horizontal di ukuran layar manapun */
   overflow-x: hidden;
 }
 
@@ -125,6 +126,7 @@ ul {
   color: var(--coklat-tua);
 }
 
+/* Tombol hamburger - hanya untuk mobile & tablet */
 .nav-toggle {
   display: flex;
   flex-direction: column;
@@ -218,35 +220,16 @@ ul {
 }
 
 .hero-image {
+  width: 100%;
   max-width: 260px;
 }
 
-.cup-illustration .cup-body {
-  fill: var(--krem);
-  stroke: var(--coklat-muda);
-  stroke-width: 4;
-}
-
-.cup-illustration .cup-lid {
-  fill: var(--coklat-muda);
-}
-
-.cup-illustration .cup-handle {
-  fill: none;
-  stroke: var(--coklat-muda);
-  stroke-width: 8;
-}
-
-.cup-illustration .cup-shadow {
-  fill: rgba(111, 78, 55, 0.12);
-}
-
-.cup-illustration .steam {
-  fill: none;
-  stroke: var(--coklat-muda);
-  stroke-width: 4;
-  stroke-linecap: round;
-  opacity: 0.6;
+.hero-image img,
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
 }
 
 .menu-section {
@@ -338,17 +321,8 @@ ul {
 }
 
 .about-image {
+  width: 100%;
   max-width: 220px;
-}
-
-.beans-illustration .bean {
-  fill: var(--coklat-muda);
-}
-
-.beans-illustration .bean-line {
-  fill: none;
-  stroke: var(--krem-tua);
-  stroke-width: 3;
 }
 
 .about-text p {
@@ -448,6 +422,7 @@ ul {
   font-size: 0.78rem;
 }
 
+/* TABLET (>= 576px dan < 992px) */
 @media (min-width: 576px) {
   .hero-buttons {
     flex-direction: row;
@@ -481,6 +456,7 @@ ul {
   }
 }
 
+/* DESKTOP (>= 992px) */
 @media (min-width: 992px) {
   .hero-inner {
     flex-direction: row;
